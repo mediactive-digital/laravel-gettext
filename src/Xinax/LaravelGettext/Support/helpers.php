@@ -89,7 +89,7 @@ if (!function_exists('_n')) {
         if (isset($args) && !is_array($args)) {
             $args = array_slice(func_get_args(), 3);
         }
-        $message = vsprintf($message, $args);
+        $message = vsprintf($message, $args ?? []);
 
         return $message;
     }
