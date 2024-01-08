@@ -148,7 +148,7 @@ class LaravelGettext
      */
     public function translatePlural($singular, $plural, $count)
     {
-        return $this->translator->translatePlural($singular, $plural, $count);
+        return $this->translator->translatePluralInline($singular . '|' . $plural, $count);
     }
 
     /**
